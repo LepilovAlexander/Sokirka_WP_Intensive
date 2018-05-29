@@ -1,13 +1,17 @@
-$(window).load(function() {
-  $('#horizontalTab').responsiveTabs({
-                rotate: false,
-                startCollapsed: 'accordion',
-                collapsible: 'accordion',
-                setHash: true,
-                activate: function(e, tab) {
-                    $('.info').html('Tab <strong>' + tab.id + '</strong> activated!');
-                }
-            });
+jQuery(function($) {
+    "use strict";
+
+    if( $('#horizontalTab').length) {
+        $('#horizontalTab').responsiveTabs({
+            rotate: false,
+            startCollapsed: 'accordion',
+            collapsible: 'accordion',
+            setHash: true,
+            activate: function (e, tab) {
+                $('.info').html('Tab <strong>' + tab.id + '</strong> activated!');
+            }
+        });
+    }
 
 ////hot deals slider left
 $('.flexhd').flexslider({

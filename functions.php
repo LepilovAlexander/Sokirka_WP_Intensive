@@ -122,13 +122,14 @@ add_action( 'widgets_init', 'intensiv_widgets_init' );
  * Enqueue scripts and styles.
  */
 function intensiv_scripts() {
+	
 	wp_enqueue_style( 'intensiv-style', get_stylesheet_uri() );
 	wp_enqueue_style('intensiv-components', get_template_directory_uri() . '/layouts/component.css');
 	wp_enqueue_style('flexslider', get_template_directory_uri() . '/layouts/flexslider.css');
 	wp_enqueue_style('prettyPhoto', get_template_directory_uri() . '/layouts/prettyPhoto.css');
 	wp_enqueue_style('intensiv-main', get_template_directory_uri() . '/layouts/style.css');
 
-
+	wp_enqueue_script('jquery');
 	wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/libs/jquery.flexslider.js', array(), '', false );
 	wp_enqueue_script( 'prettyPhoto', get_template_directory_uri() . '/js/libs/jquery.prettyPhoto.js', array(), '', false );
 	wp_enqueue_script( 'responsiveTabs', get_template_directory_uri() . '/js/libs/jquery.responsiveTabs.js', array(), '', false );
@@ -144,6 +145,8 @@ function intensiv_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'intensiv_scripts' );
+//***
+// *** Add metaboxes JS//
 function ale_add_scripts($hook) {
 
 	wp_enqueue_script( 'aletheme_metaboxes',  get_template_directory_uri(). '/inc/js/metaboxes.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-datepicker', 'media-upload', 'thickbox') );

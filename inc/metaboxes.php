@@ -49,8 +49,8 @@ class Ale_Meta_Box {
 				break;
 			}
 		}
-		
-		global $pagenow;		
+
+		global $pagenow;
 		if ( $upload && in_array( $pagenow, array( 'page.php', 'page-new.php', 'post.php', 'post-new.php' ) ) ) {
 			add_action( 'admin_head', array( &$this, 'add_post_enctype' ) );
 		}
@@ -605,7 +605,7 @@ function aletheme_metaboxes($meta_boxes) {
 		)
 	);
 
-
+// Meta boxes for contacts
 	$meta_boxes[] = array(
 		'id'         => 'contact_metaboxes',
 		'title'      => 'Settings for Contact Page',
@@ -645,20 +645,20 @@ function aletheme_metaboxes($meta_boxes) {
 				'std'  => '',
 				'type' => 'text',
 			),
-			array(
-				'name' => __('Email','aletheme'),
-				'desc' => __('Paste your email','aletheme'),
-				'id'   => $prefix . 'email2',
-				'std'  => '',
-				'type' => 'file',
-			),
-			array(
-				'name' => __('Email','aletheme'),
-				'desc' => __('Paste your email','aletheme'),
-				'id'   => $prefix . 'email3',
-				'std'  => '',
-				'type' => 'checkbox',
-			),
+			// array(
+			// 	'name' => __('Email','aletheme'),
+			// 	'desc' => __('Paste your email','aletheme'),
+			// 	'id'   => $prefix . 'email2',
+			// 	'std'  => '',
+			// 	'type' => 'file',
+			// ),
+			// array(
+			// 	'name' => __('Email','aletheme'),
+			// 	'desc' => __('Paste your email','aletheme'),
+			// 	'id'   => $prefix . 'email3',
+			// 	'std'  => '',
+			// 	'type' => 'checkbox',
+			// ),
 
 			/*array(
 				'name' => __('No Logged User alert','aletheme'),
@@ -681,6 +681,27 @@ function aletheme_metaboxes($meta_boxes) {
 				'std'  => 'Your property has been updated successfully.',
 				'type' => 'wysiwyg',
 			),*/
+		)
+	);
+// Meta boxes for about
+	$meta_boxes[] = array(
+		'id'         => 'about_metaboxes',
+		'title'      => 'Settings for About  Page',
+		'pages'      => array( 'page', ), // Post type
+		'context'    => 'normal',
+		'priority'   => 'high',
+		'show_names' => true, // Show field names on the left
+		'show_on'    => array( 'key' => 'page-template', 'value' => array('template-about.php'), ), // Specific post templates to display this metabox
+		'fields' => array(
+
+			array(
+				'name' => __('Test','aletheme'),
+				'desc' => __('Test','aletheme'),
+				'id'   => $prefix . 'test',
+				'std'  => '',
+				'type' => 'text',
+			),
+			
 		)
 	);
 
