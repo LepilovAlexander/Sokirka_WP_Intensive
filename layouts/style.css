@@ -81,7 +81,9 @@ a:hover {}
 input {}
 select {}
 label {}
- 
+ body.admin-bar .home {
+	 margin-top:32px;
+ }
 /* ------------------------- Lists */
  
 /* ------------------------- Layout */
@@ -98,9 +100,9 @@ label {}
 	clear:both;
  }
  .top{
-	height:700px;
+
 	position:relative;
-	overflow: hidden;
+
  }
  .slider {
 position: relative;
@@ -247,7 +249,7 @@ nav.main-nav ul.nav-menu li{
 	position:relative;
 }
 
-nav.main-nav > ul.nav-menu > li:hover, nav.main-nav > ul.nav-menu > li.current-menu-item{
+nav.main-nav > ul.nav-menu > li:hover, nav.main-nav > ul.nav-menu > li.current-menu-item {
 	background:#60ad4c;
 }
 nav.main-nav > ul.nav-menu > li:hover a, nav.main-nav > ul.nav-menu > li.current-menu-item a{
@@ -397,7 +399,7 @@ right: 12px;
 	height:70px;
 	background:#604283;
 	position:relative;
-	top:486px;
+	//top:486px;
 	padding-top:16px;
 }
 .q-search-wrap select{
@@ -1107,7 +1109,7 @@ footer{
 	margin-top:20px;
 }
 .column-l{
-	width: 200px;
+	width:180px;
 	margin-left: 75px;
 	margin-top:20px;
 }
@@ -1752,10 +1754,10 @@ width:176px;
 }
 
 /* BLOG */
-/*.blog{
+.blog{
 	border-top:1px dashed #ccc;
-	/*padding-top:40px;*/
-/*}*/
+	padding-top:40px;
+}
 .entry-blog{
 	float:left;
 	width:675px;
@@ -2285,7 +2287,7 @@ padding: 0px 8px;
 }
 .c-contact{
 	display:inline-block;
-	margin-right: 40px;
+	margin-right: 60px;
 	margin-top:50px;
 }
 .c-contact:last-child{

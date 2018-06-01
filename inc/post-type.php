@@ -80,3 +80,33 @@ function intensiv_custompost_type_testimonials() {
 }
 
 add_action( 'init', 'intensiv_custompost_type_testimonials' );
+
+/**
+ * Register a private 'Genre' taxonomy for post type 'book'.
+ *
+ * @see register_post_type() for registering post types.
+ */
+function register_custom_taxonomy() {
+    $args_location = array(
+        'label'        => __( 'Location', 'textdomain' ),
+        'public'       => true,
+        'rewrite'      => false,
+        'hierarchical' => true
+    );
+       $args_price = array(
+        'label'        => __( 'Price', 'textdomain' ),
+        'public'       => true,
+        'rewrite'      => false,
+        'hierarchical' => true
+    );
+         $args_type = array(
+        'label'        => __( 'Type', 'textdomain' ),
+        'public'       => true,
+        'rewrite'      => false,
+        'hierarchical' => true
+    );
+    register_taxonomy( 'location', 'deals', $args_location );
+    register_taxonomy( 'price', 'deals', $args_price );
+    register_taxonomy( 'type', 'deals', $args_type );
+}
+add_action( 'init', 'register_custom_taxonomy', 0 );

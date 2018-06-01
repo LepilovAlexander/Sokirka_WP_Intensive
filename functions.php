@@ -134,6 +134,8 @@ function intensiv_scripts() {
 	wp_enqueue_script( 'prettyPhoto', get_template_directory_uri() . '/js/libs/jquery.prettyPhoto.js', array(), '', false );
 	wp_enqueue_script( 'responsiveTabs', get_template_directory_uri() . '/js/libs/jquery.responsiveTabs.js', array(), '', false );
 	wp_enqueue_script( 'modernizr.custom', get_template_directory_uri() . '/js/libs/modernizr.custom.js', array(), '', false );
+	wp_enqueue_script( 'cbpBGSlideshow', get_template_directory_uri() . '/js/libs/cbpBGSlideshow.js', array(), '', false );
+	wp_enqueue_script( 'imagesloaded', get_template_directory_uri() . '/js/libs/jquery.imagesloaded.min.js', array(), '', false );
 
 
 	wp_enqueue_script( 'intensiv-script', get_template_directory_uri() . '/js/script.js', array(), '', false );
@@ -189,6 +191,10 @@ require get_template_directory() . '/inc/breadcrumbs.php';
  * Load metaboxes.php file.
  */
 require get_template_directory() . '/inc/metaboxes.php';
+/**
+ * Load filter.php file.
+ */
+require get_template_directory() . '/inc/filter.php';
 /**
  * Load Jetpack compatibility file.
  */

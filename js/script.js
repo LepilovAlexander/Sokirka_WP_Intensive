@@ -1,6 +1,16 @@
 jQuery(function($) {
     "use strict";
 
+
+    if($(".home-slider-box .slider").length){
+        $('.home-slider-box .slider').flexslider({
+            animation: "fade",
+            slideshow: false,
+            directionNav: false,
+            pauseOnHover: true
+        });
+    }
+
     if( $('#horizontalTab').length) {
         $('#horizontalTab').responsiveTabs({
             rotate: false,
@@ -13,6 +23,13 @@ jQuery(function($) {
         });
     }
 
+
+    //homeslider
+    $('.flexslider').flexslider({
+        animation:"fade",
+        controlNav: false,
+        directionNav: false
+    });
 ////hot deals slider left
 $('.flexhd').flexslider({
     animation: "slide"
@@ -31,11 +48,12 @@ $('.flexhd').flexslider({
   });
 });
 //// Pretty Photo
+
 $(window).load(function(){
     $("a.prettyphoto").prettyPhoto({
 	theme: 'dark_rounded', /* light_rounded / dark_rounded / light_square / dark_square / facebook */
 	social_tools:false,
-	show_title: true, /* true/false */
+	show_title: true /* true/false */
 	});
   });
 $(window).load(function(){
@@ -48,6 +66,9 @@ $container.isotope({
 });
 });
 $(document).ready(function(){
+
+    cbpBGSlideshow.init();
+
 $('.wither-w a.w-select').bind("click", function(e){ 
 	$('.city-drop').fadeToggle();
 });
