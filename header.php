@@ -106,26 +106,26 @@ $custom_logo = $intensiv_options['intensiv-logo']['url'];
 	<div class="q-search">
 		<div class="container">
 			<div class="q-search-wrap">
-				<form method="post" action="<?php echo home_url("/deals"); ?>">
+				<form method="POST" action="<?php echo home_url("/deals"); ?>">
 				<?php $current_location = get_terms('location');?>
 				<select id="location" name="location">
 					<?php foreach($current_location as $location){?>
-						<option value="<?php echo $location->term_id; ?>"><?php echo $location->name; ?></option>
+						<option><?php echo $location->name; ?></option>
 					<?php } ?>
 				</select>
 				<?php $current_type = get_terms('type');?>
 				<select id="type" name="type">
 					<?php foreach($current_type as $type){?>
-						<option value="<?php echo $type->term_id; ?>"><?php echo $type->name; ?></option>
+						<option><?php echo $type->name; ?></option>
 					<?php } ?>
 				</select>
 				<?php $current_price = get_terms('price');?>
 				<select id="coast" name="price">
 					<?php foreach($current_price as $price){?>
-						<option value="<?php echo $price->term_id; ?>"><?php echo $price->name; ?></option>
+						<option><?php echo $price->name; ?></option>
 					<?php } ?>
 				</select>
-				<button class="btn btn-yellow">quick Search</button>
+					<button class="btn btn-yellow">quick Search</button>
 				</form>
 			</div>
 		</div>

@@ -684,6 +684,7 @@ function aletheme_metaboxes($meta_boxes) {
 		)
 	);
 // Meta boxes for about
+
 	$meta_boxes[] = array(
 		'id'         => 'about_metaboxes',
 		'title'      => 'Settings for About  Page',
@@ -705,5 +706,25 @@ function aletheme_metaboxes($meta_boxes) {
 		)
 	);
 
+		$meta_boxes[] = array(
+		'id'         => 'homepage_metaboxes',
+		'title'      => 'Settings for Home  Page',
+		'pages'      => array( 'page', ), // Post type
+		'context'    => 'normal',
+		'priority'   => 'high',
+		'show_names' => true, // Show field names on the left
+		'show_on'    => array( 'key' => 'page-template', 'value' => array('template-home.php'), ), // Specific post templates to display this metabox
+		'fields' => array(
+
+			array(
+				'name' => __('Title One','aletheme'),
+				'desc' => __('Test','aletheme'),
+				'id'   => $prefix . 'title_one',
+				'std'  => '',
+				'type' => 'text',
+			),
+			
+		)
+	);
 	return $meta_boxes;
 }
